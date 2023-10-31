@@ -31,11 +31,11 @@ O codigo abaixo faz toda a magica, dê uma estudada e modifique como vc quiser, 
 
 #====COPIE O SCRIPT APARTIR DAQUI==============================
 
-# Script Para checar ip Local
-# Autor = Charles Santana - 31/10/2023
-# Modificado por = Coloque seu nome aqui e data
-# Gostou? Ajude com o valor de um cafezinho - 
-# Chave Pix Aleatoria - 7055e7e8-0794-4627-ae98-3e8ba22457ae
+#Script Para checar ip Local
+#Autor = Charles Santana - 31/10/2023
+#Modificado por = Coloque seu nome aqui e data
+#Gostou? Ajude com o valor de um cafezinho - 
+#Chave Pix Aleatoria - 7055e7e8-0794-4627-ae98-3e8ba22457ae
 
 
 import pystray
@@ -49,19 +49,19 @@ print(f"IP DA MAQUINA É : " + s.getsockname()[0])
 
 
 def create_image(width, height, color1, color2):
-    # Generate an image and draw a pattern
+    #Generate an image and draw a pattern
     image=Image.open("/home/USUARIO/ipsystray/ip.png")
    
 
     return image
 
 title=(f"IP DA MAQUINA É : " + s.getsockname()[0])
-# In order for the icon to be displayed, you must provide an icon
+#In order for the icon to be displayed, you must provide an icon
 icon = pystray.Icon(f"IP DA MAQUINA É : " + s.getsockname()[0],
     icon=create_image(64, 64, 'black', 'white'),title=(f"IP DA MAQUINA É : " + s.getsockname()[0]))
 
 
-# To finally show you icon, call run
+#To finally show you icon, call run
 
 icon.run()
 icon.mainloop()
