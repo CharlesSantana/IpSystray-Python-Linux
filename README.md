@@ -1,6 +1,8 @@
 # Script em Python para verificar ip de rede local para maquina com sistema operacional linux
 
 Caso o script nao rode em sua maquina, favor instalar os complementos e bibliotecas abaixo.
+Detalhe criar uma pasta com o nome ipsystray, e copiar os arquivo dentro.
+
 # Pip
 sudo apt install python-pip
 
@@ -28,6 +30,8 @@ Onde se le image=Image.open("/home/USUARIO/ipsystray/ip.png"), na linha 53 deste
 
 # O CODIGO
 O codigo abaixo faz toda a magica, dê uma estudada e modifique como vc quiser, deixe os comentarios dando creditos ao seu amigo Charles Santana, que tive que estudar para deixar funcinando para que vc tambem use. 
+
+
 
 #Script Para checar ip Local
 #Autor = Charles Santana - 31/10/2023
