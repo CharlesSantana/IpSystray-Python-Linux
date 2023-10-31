@@ -29,42 +29,15 @@ Onde se le image=Image.open("/home/USUARIO/ipsystray/ip.png"), na linha 53 deste
 # O CODIGO
 O codigo abaixo faz toda a magica, dê uma estudada e modifique como vc quiser, deixe os comentarios dando creditos ao seu amigo Charles Santana, que tive que estudar para deixar funcinando para que vc tambem use. 
 
-#====COPIE O SCRIPT APARTIR DAQUI==============================
-
 #Script Para checar ip Local
 #Autor = Charles Santana - 31/10/2023
 #Modificado por = Coloque seu nome aqui e data
 #Gostou? Ajude com o valor de um cafezinho - 
 #Chave Pix Aleatoria - 7055e7e8-0794-4627-ae98-3e8ba22457ae
 
+# bonus
+Para rodar em segundo plano use o codigo abaixo
+em breve vou dispor de como vc pode colocar em segundo plano
 
-import pystray
-import socket
-from PIL import Image, ImageDraw
-
-s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-s.connect(("8.8.8.8", 80))
-print(f"IP DA MAQUINA É : " + s.getsockname()[0])
-
-
-
-def create_image(width, height, color1, color2):
-    #Generate an image and draw a pattern
-    image=Image.open("/home/USUARIO/ipsystray/ip.png")
-   
-
-    return image
-
-title=(f"IP DA MAQUINA É : " + s.getsockname()[0])
-#In order for the icon to be displayed, you must provide an icon
-icon = pystray.Icon(f"IP DA MAQUINA É : " + s.getsockname()[0],
-    icon=create_image(64, 64, 'black', 'white'),title=(f"IP DA MAQUINA É : " + s.getsockname()[0]))
-
-
-#To finally show you icon, call run
-
-icon.run()
-icon.mainloop()
-
-
+python3 ipsystray.py > /dev/null 2>&1 & disown
 
